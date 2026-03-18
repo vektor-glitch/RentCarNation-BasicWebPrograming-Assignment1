@@ -468,7 +468,7 @@ body {
 }
 
 .booking-hero h1 {
-    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-size: clamp(32px, 4vw, 54.4px);
     line-height: 1.15;
     margin-bottom: 16px;
     color: var(--color-text-main);
@@ -623,7 +623,7 @@ body {
 
 .booking-form-card .form-control:focus {
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+    box-shadow: 0 0 0 3.2px rgba(59, 130, 246, 0.15);
 }
 
 .booking-package-grid {

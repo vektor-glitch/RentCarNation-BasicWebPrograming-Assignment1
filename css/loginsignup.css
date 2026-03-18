@@ -49,7 +49,7 @@ body.login-page {
 
 .login-card .form-control:focus {
     border-color: #3b82f6;
-    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+    box-shadow: 0 0 0 3.2px rgba(59, 130, 246, 0.15);
 }
 
 .login-card .form-check-input:checked {
