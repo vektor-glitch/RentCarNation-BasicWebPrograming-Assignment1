@@ -1,0 +1,811 @@
+:root {
+    /* Primary Colors */
+    --color-primary: #1e3a8a;
+    --color-primary-hover: #1d4ed8;
+    --color-accent: #3b82f6;
+
+    /* Background */
+    --color-bg-main: #ffffff;
+    --color-bg-section: #f3f4f6;
+    --color-card: #ffffff;
+
+    /* Text */
+    --color-text-main: #111827;
+    --color-text-secondary: #6b7280;
+    --color-text-light: #ffffff;
+
+    /* Navbar */
+    --color-navbar: #1e3a8a;
+    --color-navbar-hover: #93c5fd;
+
+    /* Button */
+    --color-btn-primary: #3b82f6;
+    --color-btn-primary-hover: #2563eb;
+    --color-btn-secondary: #e5e7eb;
+
+    /* Border & Shadow */
+    --color-border: #e5e7eb;
+    --shadow-soft: 0 4px 24px rgba(30, 58, 138, 0.13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+}
+
+#mainNav,
+.navbar-custom {
+    background-color: var(--color-navbar) !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-custom .nav-link {
+    color: var(--color-text-light) !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--color-navbar-hover) !important;
+}
+
+.navbar-toggler {
+    filter: brightness(0) invert(1);
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--color-text-light) !important;
+
+}
+
+.logo-car {
+    color: var(--color-accent);
+}
+
+.btn-cta {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text-light) !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    padding: 15px 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    animation: bounce 0.5s forwards;
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.4);
+    transform: scale(1.05);
+}
+
+#heroCarousel {
+    position: relative;
+}
+
+#heroCarousel .carousel-item {
+    position: relative;
+    height: 550px;
+}
+
+#heroCarousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, var(--color-bg-section) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    z-index: 1;
+}
+
+.carousel-caption {
+    bottom: 45px !important;
+}
+
+.carousel-caption h5 {
+    color: var(--color-text-main);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.carousel-caption p {
+    color: var(--color-text-main);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    top: 42%;
+    bottom: auto;
+    transform: translateY(-50%);
+    filter: invert(1) grayscale(100%);
+    opacity: 1;
+}
+
+#heroCarousel .carousel-indicators {
+    bottom: 12px;
+    z-index: 6;
+}
+
+#heroCarousel .carousel-indicators [data-bs-target] {
+    background-color: #111827;
+    opacity: 0.55;
+}
+
+#heroCarousel .carousel-indicators .active {
+    opacity: 1;
+}
+
+.product {
+    margin-top: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.capacity-text {
+    color: var(--color-accent) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text-light) !important;
+    border: 3px solid transparent !important;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    padding: 15px 50px;
+    transition: all 0.3s ease;
+    width: 220px;
+    height: 45px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-bg-main) !important;
+    color: var(--color-text-main) !important;
+    border: 3px solid var(--color-accent) !important;
+}
+
+@media (max-width: 576px) {
+    .btn-primary {
+        width: 100%;
+        max-width: 260px;
+    }
+}
+
+.service-list i {
+    color: var(--color-accent) !important;
+}
+
+.service {
+    background-color: var(--color-bg-main) !important;
+}
+
+.testimonials {
+    background-color: var(--color-bg-section) !important;
+}
+
+.testimonial-card {
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: var(--color-navbar);
+}
+
+.testimonial-media {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-photo {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 14px;
+    display: block;
+}
+
+.testimonial-content {
+    padding: 32px;
+}
+
+.testimonial-quote {
+    margin-bottom: 16px;
+    font-size: 17.28px;
+    line-height: 1.7;
+    color: rgba(248, 250, 252, 0.95);
+}
+
+.testimonial-name {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 3.2px;
+    color: var(--color-text-light);
+}
+
+.testimonial-role {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: rgba(203, 213, 225, 0.95);
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    width: 8%;
+}
+
+#testimonialCarousel .testimonial-control {
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+#testimonialCarousel .testimonial-control .carousel-control-prev-icon,
+#testimonialCarousel .testimonial-control .carousel-control-next-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.18);
+    background-size: 55% 55%;
+}
+
+#testimonialCarousel {
+    padding-bottom: 35.2px;
+}
+
+#testimonialCarousel .carousel-indicators {
+    bottom: -6px;
+}
+
+#testimonialCarousel .carousel-indicators [data-bs-target] {
+    width: 28px;
+    height: 4px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #64748b;
+    opacity: 0.75;
+}
+
+#testimonialCarousel .carousel-indicators .active {
+    background-color: var(--color-accent);
+    opacity: 1;
+}
+
+@media (max-width: 991px) {
+
+    #testimonialCarousel .carousel-control-prev,
+    #testimonialCarousel .carousel-control-next {
+        width: 12%;
+    }
+
+    .testimonial-content {
+        padding: 24px;
+    }
+}
+
+#about {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+}
+
+#about a,
+#about a:visited,
+#about a:active {
+    color: var(--color-text-secondary);
+}
+
+.footer-main {
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-desc {
+    margin-top: 12.8px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.footer-heading {
+    color: var(--color-text-main);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-links li {
+    margin-bottom: 9.6px;
+    color: var(--color-text-secondary);
+}
+
+.footer-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary-hover);
+}
+
+.footer-hover-title {
+    transition: none !important;
+}
+
+.footer-hover-title:hover {
+    color: var(--color-accent) !important;
+}
+
+.footer-nav-links a {
+    display: inline-block;
+    transition: none !important;
+}
+
+.footer-nav-links a:hover {
+    color: var(--color-accent) !important;
+}
+
+.footer-social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-text-main) !important;
+    background-color: #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.footer-social-link:hover {
+    color: #ffffff !important;
+    background-color: var(--color-accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-copy {
+    color: var(--color-text-secondary);
+}
+
+.footer-bottom-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-link:hover {
+    color: var(--color-primary-hover);
+}
+
+@media (max-width: 767px) {
+    .testimonial-content {
+        padding: 20px;
+    }
+}
+
+.booking-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 22%),
+        linear-gradient(180deg, #eff6ff 0%, #f8fafc 35%, #eef2ff 100%);
+}
+
+.booking-wrapper {
+    padding-top: 76px;
+}
+
+.booking-hero {
+    padding: 56px 0 28px;
+}
+
+.booking-hero-copy {
+    max-width: 680px;
+}
+
+.booking-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: rgba(30, 58, 138, 0.08);
+    color: var(--color-primary);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.booking-hero h1 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: var(--color-text-main);
+}
+
+.booking-hero p {
+    max-width: 600px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.booking-content {
+    padding: 8px 0 56px;
+}
+
+.booking-car-card,
+.booking-form-card,
+.booking-empty,
+.booking-alert {
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.booking-car-card {
+    overflow: hidden;
+}
+
+.booking-car-media {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.12), rgba(59, 130, 246, 0.05));
+    padding: 28px;
+}
+
+.booking-car-media img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+}
+
+.booking-car-body,
+.booking-form-card {
+    padding: 28px;
+}
+
+.booking-card-eyebrow {
+    margin-bottom: 6px;
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.booking-car-body h2,
+.booking-form-header h2,
+.booking-empty h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.booking-rating {
+    padding: 8px 14px;
+    border-radius: 999px;
+    background-color: #eff6ff;
+    color: #f59e0b;
+    font-size: 15px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.booking-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.booking-feature-item {
+    padding: 16px;
+    border-radius: 18px;
+    background-color: #f8fafc;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+}
+
+.booking-feature-item span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.booking-feature-item strong {
+    font-size: 16px;
+    color: var(--color-text-main);
+}
+
+.booking-summary-box {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #ffffff;
+}
+
+.booking-summary-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.booking-summary-line+.booking-summary-line {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.booking-summary-total strong {
+    font-size: 22px;
+}
+
+.booking-form-header {
+    margin-bottom: 24px;
+}
+
+.booking-form-header p:last-child {
+    margin-bottom: 0;
+    color: var(--color-text-secondary);
+}
+
+.booking-form-card .form-label {
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.booking-form-card .form-control {
+    min-height: 52px;
+    border-radius: 14px;
+    border: 1px solid #cbd5e1;
+    padding: 12px 16px;
+    box-shadow: none;
+}
+
+.booking-form-card textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.booking-form-card .form-control:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+}
+
+.booking-package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.booking-package-option {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.booking-package-option input {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+}
+
+.booking-package-option span {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+.booking-package-option strong {
+    font-size: 17px;
+}
+
+.booking-package-option small {
+    color: var(--color-text-secondary);
+}
+
+.booking-package-option input:checked+span {
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), rgba(255, 255, 255, 0.95));
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.12);
+}
+
+.booking-form-footer {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(203, 213, 225, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.booking-form-footer small {
+    color: var(--color-text-secondary);
+}
+
+.booking-empty {
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.booking-empty i {
+    display: inline-flex;
+    margin-bottom: 18px;
+    font-size: 44px;
+    color: var(--color-accent);
+}
+
+.booking-empty p {
+    max-width: 480px;
+    margin: 12px auto 24px;
+    color: var(--color-text-secondary);
+}
+
+.booking-alert {
+    margin-bottom: 20px;
+    padding: 20px 22px;
+}
+
+@media (max-width: 991px) {
+    .booking-wrapper {
+        padding-top: 72px;
+    }
+
+    .booking-form-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .booking-form-footer .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .booking-hero {
+        padding-top: 32px;
+    }
+
+    .booking-car-body,
+    .booking-form-card {
+        padding: 22px;
+    }
+
+    .booking-feature-grid,
+    .booking-package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-summary-line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.booking-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+
+.booking-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.booking-car-card,
+.booking-form-card {
+    width: 420px;
+    max-width: 100%;
+    min-width: 320px;
+}
+
+.booking-car-card {
+    background: var(--color-card);
+    box-shadow: var(--shadow-soft);
+    border-radius: 24px;
+    border: 1px solid var(--color-border);
+    padding: 32px 24px;
+}
+
+.booking-form-card {
+    background: var(--color-bg-section);
+    border-radius: 24px;
+    border: 1px solid var(--color-border);
+    padding: 32px 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.booking-wrapper {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+    .booking-row {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .booking-car-card,
+    .booking-form-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .booking-wrapper {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+}
